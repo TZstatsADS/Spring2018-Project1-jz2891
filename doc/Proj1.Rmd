@@ -112,7 +112,7 @@ for(i in seq(nrow(speech.list))) {
     html_text() # get the text
   speech.list$fulltext[i]=text
   # Create the file name
-  filename <- paste0("../data/InauguralAddress/", 
+  filename <- paste0("../data/InauguralSpeeches/", 
                      speech.list$type[i],
                      speech.list$File[i], "-", 
                      speech.list$Term[i], ".txt")
