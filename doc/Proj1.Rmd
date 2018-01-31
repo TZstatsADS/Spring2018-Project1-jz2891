@@ -1,7 +1,6 @@
 ---
 title: 'Project 1: An R Notebook Data Story on Presidential Inaugural Speeches'
 output:
-  html_document: default
   html_notebook: default
 ---
 \
@@ -35,8 +34,6 @@ library("tibble")
 # You may need to run
 # sudo ln -f -s $(/usr/libexec/java_home)/jre/lib/server/libjvm.dylib /usr/local/lib
 # in order to load qdap
-# 
-dyn.load(paste0(system2('/usr/libexec/java_home', stdout = TRUE), '/lib/server/libjvm.dylib'))
 
 library("qdap")
 library("sentimentr")
@@ -112,7 +109,7 @@ for(i in seq(nrow(speech.list))) {
     html_text() # get the text
   speech.list$fulltext[i]=text
   # Create the file name
-  filename <- paste0("../data/InauguralAddress/", 
+  filename <- paste0("../data/InauguralSpeeches/", 
                      speech.list$type[i],
                      speech.list$File[i], "-", 
                      speech.list$Term[i], ".txt")
